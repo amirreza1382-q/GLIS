@@ -1,10 +1,11 @@
 package Managers;
 
 import Common.PopularFood;
+import InterFace.IntPopularFood;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PopularFoodManager {
+public class PopularFoodManager implements IntPopularFood <PopularFood> {
     private List<PopularFood> popularFoods;
 
     // سازنده پیش‌فرض
