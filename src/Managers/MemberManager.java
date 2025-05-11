@@ -3,9 +3,10 @@ package Managers;
 import Common.Member;
 import Common.commons;
 import FileManager.txtFileManager;
+import InterFace.IntMember;
 import java.io.FileNotFoundException;
 
-public class MemberManager {
+public class MemberManager implements IntMember <Member> {
 	private txtFileManager member;
 
 	public MemberManager() throws FileNotFoundException {
