@@ -6,7 +6,8 @@ import FileManager.txtFileManager;
 import InterFace.IntFood;
 import java.io.FileNotFoundException;
 
-public class FoodManager implements IntFood<ّFood> {
+public class FoodManager implements IntFood<Food> {
+	
 	private txtFileManager f;
 
 	public FoodManager() throws FileNotFoundException {
@@ -14,6 +15,7 @@ public class FoodManager implements IntFood<ّFood> {
 		//f.CreateFile();
 	}
     ////////////////////////////////
+        @Override
 	public void insert(Food a) throws FileNotFoundException {
 		String S = a.getFoodname() + commons.SPILITTER + a.getNumberfood() + commons.SPILITTER + a.getFoodquantity()
 				+ commons.SPILITTER + a.getPrice() + commons.SPILITTER + a.getDesername() + commons.SPILITTER

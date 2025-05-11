@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 
 public interface IntFood<T> {
   
-    public void insert(T a);
+    public void insert(T a) throws FileNotFoundException ;
     public T Splitfood(String s);
     public  T[] SelectAll() throws FileNotFoundException;
     public T[] searchfood(String s) throws FileNotFoundException;

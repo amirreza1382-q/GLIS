@@ -3,9 +3,10 @@ package Managers;
 import Common.ShupFood;
 import Common.commons;
 import FileManager.txtFileManager;
+import InterFace.IntShup;
 import java.io.FileNotFoundException;
 
-public class ShupManager {
+public class ShupManager implements IntShup <ShupFood> {
     private txtFileManager B;
     ///////////////////////////////////////////////
     public ShupManager() throws FileNotFoundException {

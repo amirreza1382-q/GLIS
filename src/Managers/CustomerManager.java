@@ -3,9 +3,10 @@ package Managers;
 import Common.Customer;
 import Common.commons;
 import FileManager.txtFileManager;
+import InterFace.IntCustom;
 import java.io.FileNotFoundException;
 
-public class CustomerManager {
+public class CustomerManager implements IntCustom <Customer> {
 
     txtFileManager txtFileManager;
     public CustomerManager() throws FileNotFoundException {
@@ -65,7 +66,37 @@ public void updateCustomer(String newCustomer, Customer updatedCustomer) throws 
     txtFileManager.update(newCustomer, updatedData); // استفاده از متد update در txtFileManager
 }
 
-    public static void insert(Customer c) {
+    public  void insert(Customer c) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void insertA(Customer A) throws FileNotFoundException {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Customer SplitA(String s) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Customer[] SelectAs() throws FileNotFoundException {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Customer[] SearchAs(String s) throws FileNotFoundException {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void DeletA(String AName) throws FileNotFoundException {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void updateA(String newA, Customer updatedA) throws FileNotFoundException {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
