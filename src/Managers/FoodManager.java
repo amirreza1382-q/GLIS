@@ -3,9 +3,10 @@ package Managers;
 import Common.Food;
 import Common.commons;
 import FileManager.txtFileManager;
+import InterFace.IntFood;
 import java.io.FileNotFoundException;
 
-public class FoodManager {
+public class FoodManager implements IntFood<ّFood> {
 	private txtFileManager f;
 
 	public FoodManager() throws FileNotFoundException {
@@ -77,7 +78,7 @@ public class FoodManager {
 	    f.update(newfood, updatedData); // استفاده از متد update در txtFileManager
 	}
 
-    public String[] searchFood(String name) {
+    public Food[] searchFood(String name) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 	public void decreaseFoodQuantity(String foodName, int amount) throws FileNotFoundException {
