@@ -5,6 +5,7 @@ import Common.commons;
 import FileManager.txtFileManager;
 import InterFace.IntMember;
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 
 public class MemberManager implements IntMember <Member> {
 	private txtFileManager member;
@@ -44,7 +45,7 @@ public class MemberManager implements IntMember <Member> {
 
 	}
 
-	public Member[] searchfood(String s) throws FileNotFoundException {
+	public Member[] searchMember(String s) throws FileNotFoundException {
 		String B[] = member.getarrayfromfile();
 		Member C[] = new Member[B.length];
 		int count = 0;
@@ -54,9 +55,8 @@ public class MemberManager implements IntMember <Member> {
 				C[count++] = member;
 
 		}
-		Member D[] = new Member[count];
-		System.arraycopy(C, 0, D, 0, count);
-		return D;
+		 
+		return Arrays.copyOf(C, count);
 
 	}
 
@@ -83,5 +83,7 @@ public class MemberManager implements IntMember <Member> {
 				+ updatedMember.getSttafAddress();
 		member.update(newmember, updatedData);
 	}
+
+   
 
 }

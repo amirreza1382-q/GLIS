@@ -5,6 +5,7 @@ import Common.commons;
 import FileManager.txtFileManager;
 import InterFace.IntFood;
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 
 public class FoodManager implements IntFood<Food> {
 	
@@ -58,9 +59,7 @@ public class FoodManager implements IntFood<Food> {
 			}
 
 		}
-		Food D[] = new Food[count];
-		System.arraycopy(C, 0, D, 0, count);
-		return D;
+		return Arrays.copyOf(C, count);
 
 	}
     ///////////////////////////////////
@@ -80,9 +79,7 @@ public class FoodManager implements IntFood<Food> {
 	    f.update(newfood, updatedData); // استفاده از متد update در txtFileManager
 	}
 
-    public Food[] searchFood(String name) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+
 	public void decreaseFoodQuantity(String foodName, int amount) throws FileNotFoundException {
 		Food[] foods = SelectAll();
 		for (int i = 0; i < foods.length; i++) {
@@ -99,4 +96,5 @@ public class FoodManager implements IntFood<Food> {
 			}
 		}
 	}
+
 }
